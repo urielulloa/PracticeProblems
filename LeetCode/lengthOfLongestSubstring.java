@@ -14,13 +14,13 @@ class Solution {
         while(lastCharIndex < s.length()){ 
             if (set.contains(s.charAt(lastCharIndex))){ //If we have already seen this character
                 set.remove(s.charAt(frontCharIndex)); //We remove the first character in our substring
-                frontCharIndex++; //Update which character if first in our substring
+                frontCharIndex++; //Update which character is first in our substring (last character remains unchanged).
             }
             
             else{
-                set.add(s.charAt(lastCharIndex));
-                lastCharIndex++;
-                longestSubstringLength = Math.max(longestSubstringLength, lastCharIndex-frontCharIndex);
+                set.add(s.charAt(lastCharIndex)); //Add the new character to our set
+                lastCharIndex++; //Look the next character in the string during our next iteration
+                longestSubstringLength = Math.max(longestSubstringLength, lastCharIndex-frontCharIndex); //Check to see if the current substring is the longest substring seen so far.
             }
         }
         
