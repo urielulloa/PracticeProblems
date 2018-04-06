@@ -1,3 +1,4 @@
+;Binary Search Tree implementation in Scheme.
 ;A tree is a list where the car value is the current value, the cadr is the left subtree, and the caddr is the right subtree.
 
 (define (make-bst n left right) ;makes a Binary Search Tree
