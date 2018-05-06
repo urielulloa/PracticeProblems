@@ -18,12 +18,10 @@ class Solution(object):
         :type head: ListNode
         :type k: int
         :rtype: ListNode
-        """
-        
+        """ 
         if head is None or k == 0 or head.next is None:
             return head
-        
-        
+  
         #Loop to get the length of the linked-list. O(n)
         #This loop is necessary to compute k%length of list which tells us whihch element is the last element in our list
         current = head
